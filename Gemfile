@@ -51,5 +51,9 @@ group :development do
 end
 gem 'haml'
 gem 'haml-rails'
+gem 'paperclip'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'jquery-rails'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

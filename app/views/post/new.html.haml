@@ -1,11 +1,14 @@
 %h1 Create a new post
 
-=form_for @post, :method => :post do |p|
+=form_for @post, :method => :post, html: { multipart: true } do |p|
   .field
     =p.label :title, "Title"
     =p.text_field :title
   .field
     =p.label :text, "Post Text"
     =p.text_field :text
+  .field 
+    =p.label :image
+    =p.file_field :image
   .field
     =p.submit

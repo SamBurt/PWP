@@ -1,5 +1,14 @@
 %h1 Sam Burt
--@posts.each do |p|
-  %p= link_to("Title = #{p.title}", post_path(p))
+%table.table
+  %tbody
+    %tr
+      %td Title
+      %td Contents
+      %td Image
+    -@posts.each do |p|
+      %tr
+        %td= link_to("#{p.title}", post_path(p))
+        %td= "#{p.text}"
+        %td= link_to image_tag(p.image.url(:thumbnail)), p.image.url
 
 %h4= link_to("Create new post", new_post_path)
